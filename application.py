@@ -11,6 +11,7 @@ from langchain.prompts import PromptTemplate
 from dotenv import load_dotenv
 
 load_dotenv()
+GOOGLE_API_KEY = "AIzaSyAJ8gsEmZKULLIeL-eFLeHxH0pcUSgGOks"
 os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
@@ -73,7 +74,7 @@ def user_input(user_question):
 
 def main():
     st.set_page_config("Chat PDF")
-    st.header("Chat with PDF using Gemini💁")
+    st.header("Chat with multiple PDF")
 
     user_question = st.text_input("Ask a Question from the PDF Files")
 
